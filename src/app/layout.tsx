@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'YoshiREST™ RESTful API Suite',
-  description: 'YoshiREST™ is an extensive suite of RESTful APIs for developers, by developers.',
+  title: 'Yoshi™',
+  description: 'Yoshi™ | A light-weight, multi-functional, fitness utility bot.',
 }
 {/*TODO: change meta description*/}
 
