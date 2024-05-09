@@ -3,7 +3,8 @@
 import React, { Dispatch, SetStateAction, useState } from "react";
 import { AnimatePresence, motion }                   from "framer-motion";
 
-import { Footer }                                    from "@/app/components/Footer";
+import { Navbar }                                    from "@components/Navbar";
+import { Footer }                                    from "@components/Footer";
 
 const Privacy = () => {
   const [open, setOpen] = useState(solutions[0].id);
@@ -17,7 +18,7 @@ const Privacy = () => {
 
       <div className="w-full max-w-5xl mx-auto grid gap-8 grid-cols-1 lg:grid-cols-[1fr_350px]">
         <div>
-          <h3 className="text-4xl font-bold mb-8">privacy</h3>
+          <h3 className="text-4xl font-bold mb-8">privacy policy</h3>
           <div className="flex flex-col gap-4">
             {solutions.map((q) => {
               return (
@@ -42,6 +43,7 @@ const Privacy = () => {
         </AnimatePresence>
       </div>
 
+      <Navbar />
       <Footer />
     </section>
   );
@@ -112,9 +114,9 @@ export default Privacy;
 const solutions = [
   {
     id: 1,
-    title: "data-free at its core",
+    title: "minimal data collection",
     description:
-      "we store nothing, all data is sourced externally, and all our code is completely open source.",
+      "we store little to no data about our users. we only collect data that is necessary for the operation of our service. examples include user ids, guild ids, and channel ids, assorted numbers, strings, and related booleans.",
     imgSrc:
       "https://media1.giphy.com/media/tKwBcoHhMCDRdGwga0/giphy.gif?cid=ecf05e471ygvxyik6mlu8c07mkeqmtlkznpk9d2lzycv5d7c&ep=v1_gifs_search&rid=giphy.gif&ct=g",
   },
@@ -122,7 +124,7 @@ const solutions = [
     id: 3,
     title: "use privately with confidence",
     description:
-      "zero logging, zero data retention, zero user data. no cookies. no tracking. no telemetry. true privacy for our users is our number one priority.",
+      "privacy for our users is our number one priority, and we take it very seriously. we do not share any data with third parties, and we do not sell any data to third parties. we do not use any data for advertising purposes.",
     imgSrc:
       "https://media1.giphy.com/media/FuymHMw4bkvgxLqGqw/giphy.gif?cid=ecf05e47lqrxurr1g6whyf0wg6bm7pvytl33f5y85i2b6447&ep=v1_gifs_search&rid=giphy.gif&ct=g",
   },

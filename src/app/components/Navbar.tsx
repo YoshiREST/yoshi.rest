@@ -1,6 +1,5 @@
 import React      from "react";
 import { motion } from "framer-motion";
-import {NavLogo} from "@/app/components/NavLogo";
 
 export const Navbar = () => {
   return (
@@ -14,33 +13,16 @@ const SimpleFloatingNav = () => {
   return (
       <div>
           <nav
-              className="fixed left-[0%] top-0 flex items-center rounded-lg p-3 text-sm text-neutral-50 fill-white">
-              <NavLogo />
-          </nav>
+              className="fixed left-[50%] top-8 flex w-fit -translate-x-[50%] items-center gap-6 rounded-lg border-[1px] bg-gradient-to-r from-orange-400 to-pink-400 p-3 text-sm text-neutral-50 fill-white">
 
-          <nav
-              className="fixed left-[50%] top-8 flex w-fit -translate-x-[50%] items-center gap-6 rounded-lg border-[1px] border-indigo-900 bg-indigo-600 p-3 text-sm text-neutral-50 fill-white">
-
-              <NavLink redirect={'/search'}>  Search  </NavLink>
+              <NavLink redirect={'/'}>  Home  </NavLink>
+              <NavLink redirect={'/docs'}>  Docs  </NavLink>
               <NavLink redirect={'/terms'}>   Terms   </NavLink>
               <NavLink redirect={'/privacy'}> Privacy </NavLink>
           </nav>
-
-          <AuthNav />
       </div>
   );
 };
-
-const AuthNav = () => {
-    return (
-        <nav
-            className="fixed right-[0%] top-8 flex w-fit -translate-x-[50%] items-center gap-6 rounded-lg border-[1px] border-indigo-900 bg-indigo-600 p-3 text-sm text-neutral-50 fill-white">
-        <NavLink redirect={'/login'}>    Login    </NavLink>
-        <NavLink redirect={'/register'}> Register </NavLink>
-        </nav>
-    );
-
-}
 
 const NavLink = ({children, redirect}: { children: string, redirect: string }) => {
     return (

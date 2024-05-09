@@ -1,18 +1,23 @@
 'use client';
 
-import React      from "react";
+import React              from "react";
 
-import { Footer } from "@/app/components/Footer";
+import { NextUIProvider } from "@nextui-org/react";
 
-import Landing    from "@/app/containers/landing/Landing";
-import Features   from "@/app/containers/features/Features";
+import { Navbar }         from "@components/Navbar";
+import { Footer }         from "@components/Footer";
+
+import Landing            from "@containers/landing/Landing";
 
 const Home = () => {
     return (
-      <div>
-        <Landing />
-        <Footer />
-      </div>
+      <NextUIProvider>
+        <div>
+            <Navbar/>
+                <Landing />
+            <Footer />
+        </div>
+      </NextUIProvider>
     );
 };
 
